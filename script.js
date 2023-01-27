@@ -94,7 +94,9 @@ function Calculate(){
         'Gold': 5,
         'Silver': 10,
     }
-    resistorband.classList.add('bandAnimation');
+    setTimeout(function() {
+      resistorband.classList.add('bandAnimation');
+    }, 2000);
     let color1 = colorOne.innerHTML;
     let color2 = colorTwo.innerHTML;
     let color3 = colorThree.innerHTML;
