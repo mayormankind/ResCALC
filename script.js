@@ -103,12 +103,12 @@ function Calculate(){
     let color4 = colorFour.innerHTML;
     if(color1!=='' & color2!=='' & color3!==''){
         if(color4){
-            returnValue = (ColorCodeValues[color1] ColorCodeValues[color2]) * Math.pow(10,ColorCodeValues[color3])
+            returnValue = (ColorCodeValues[color1]*10 ColorCodeValues[color2]) * Math.pow(10,ColorCodeValues[color3])
             toleranceValue = toleranceValues[color4];
             valueContainer.innerHTML = `<h2>Resistor value is ${returnValue}Ω with ±${toleranceValue}% tolerance</h2>`;
         }
         else{
-            returnValue = (ColorCodeValues[color1] + ColorCodeValues[color2]) * Math.pow(10,ColorCodeValues[color3])
+            returnValue = (ColorCodeValues[color1]*10 + ColorCodeValues[color2]) * Math.pow(10,ColorCodeValues[color3])
             valueContainer.innerHTML = `<h2>Resistor value is ${returnValue}Ω</h2>`;
         }
         console.log(returnValue);
