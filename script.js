@@ -108,6 +108,9 @@ function Calculate(){
             if(returnValue>=1000){
               returnValue= returnValue/1000;
               valueContainer.innerHTML = `<h2>Resistor value is ${returnValue}KΩ with ±${toleranceValue}% tolerance</h2>`;
+            }else if(returnValue>=1000000){
+              returnValue = returnValue/(1000*1000);
+              valueContainer.innerHTML = `<h2>Resistor value is ${returnValue}MΩ with ±${toleranceValue}% tolerance</h2>`;
             }else{
               valueContainer.innerHTML = `<h2>Resistor value is ${returnValue}Ω with ±${toleranceValue}% tolerance</h2>`;
             }
