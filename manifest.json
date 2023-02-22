@@ -1,0 +1,15 @@
+ {
+  "short_name": "Mankind Portfolio",
+  "name": "Mankind Portfolio",
+  "icons": [
+    {
+      "src": "LogoWhite.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "black"
+}
