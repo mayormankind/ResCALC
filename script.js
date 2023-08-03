@@ -67,7 +67,6 @@ buttClick(buttonsFour,buttFour,colorFour,bandFour);
 
 calculateButton.addEventListener('click',Calculate)
 
-
 function Calculate(){
     let returnValue = '';
     let toleranceValue = '';
@@ -94,9 +93,12 @@ function Calculate(){
         'Gold': 5,
         'Silver': 10,
     }
-    setTimeout(function() {
-      resistorband.classList.add('bandAnimation');
-    }, 2000);
+    resistorband.classList.add('bandAnimation');
+    if(resistorband.classList.contains('bandAnimation')){
+        setTimeout(()=> {
+            resistorband.classList.remove('bandAnimation');
+        }, 2000);
+    }
     let color1 = colorOne.innerHTML;
     let color2 = colorTwo.innerHTML;
     let color3 = colorThree.innerHTML;
@@ -119,7 +121,6 @@ function Calculate(){
             returnValue = (ColorCodeValues[color1]*10 + ColorCodeValues[color2]) * Math.pow(10,ColorCodeValues[color3])
             valueContainer.innerHTML = `<h2>Resistor value is ${returnValue}Ω</h2>`;
         }
-        console.log(returnValue);
     }
     else{
         alert('make sure at least the first 3 bands are specified')
